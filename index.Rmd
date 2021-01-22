@@ -1,0 +1,26 @@
+---
+title: "Example for the team"
+author: "S.rufus"
+date: "22/01/2021"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## A generic header for you to enjoy :)
+
+This could be useful for plotting the *locations* of **inspections**...
+would the inspectors/supervisors want something like this?
+```{r, echo=FALSE, warning=FALSE}
+library(leaflet)
+set.seed(2016-04-25)
+df<-data.frame(lat=runif(500, min=45.41, max=45.43),
+               lng=runif(500, min=-75.71, max=-75.69))
+df %>%
+  leaflet() %>%
+  addTiles() %>%
+  addMarkers(clusterOptions = markerClusterOptions())
+df
+```
