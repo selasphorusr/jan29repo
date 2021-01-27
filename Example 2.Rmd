@@ -1,0 +1,22 @@
+---
+title: "Example 2"
+author: "S.rufus"
+date: "27/01/2021"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+### Here is a nice, interactive plot for y'all!
+
+```{r, echo=FALSE, warning=FALSE, message=FALSE}
+library(plotly)
+library(datasets)
+plot_ly(mtcars, x=mtcars$wt, y=mtcars$mpg, mode="markers") %>%
+  layout(title="Mtcars dataset plotted using the package 'Plotly'",
+         xaxis = list(title="Car Weight (tonnes)"), 
+         yaxis=list(title="Car Gas Mileage (MPG)"))
+
+```
