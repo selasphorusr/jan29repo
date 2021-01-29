@@ -21,3 +21,10 @@ plot_ly(mtcars, x=mtcars$wt, y=mtcars$mpg, mode="markers") %>%
 
 ```
 
+But perhaps we wanted to add more info here...
+
+```{r, echo=FALSE, warning=FALSE, message=FALSE}
+head(mtcars)
+str(mtcars)
+print("Hello World")
+```
